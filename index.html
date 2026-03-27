@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multani AlMumtaz Restaurant - Hilli Complex | Your No. 1 Choice</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-dark: #1a0a00;
+            --accent-orange: #c8722a;
+            --background-light: #f5f0e8;
+            --text-light: #f5f0e8;
+            --text-dark: #1a0a00;
+
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        /* Base Styles & Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-orange);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-dark);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-dark);
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        h1 { font-size: 3em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
+        h4 { font-size: 1.4em; }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            color: var(--text-light); /* Keep text light on hover */
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--accent-orange);
+            color: var(--accent-orange);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--primary-dark);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+
+        .navbar .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8em;
+            color: var(--accent-orange);
+            font-weight: bold;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar .nav-links a {
+            color: var(--text-light);
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-weight: 400;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .navbar .nav-links a:hover {
+            color: var(--accent-orange);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        /* Mobile Nav Toggle */
+        .nav-toggle {
+            display: none;
+            font-size: 1.8em;
+            color: var(--text-light);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://source.unsplash.com/featured/1600x900/?restaurant,food,plating');
+            background-size: cover;
+            background-position: center;
+            color: var(--text-light);
+            padding: 150px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        .hero h1 {
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            color: var(--accent-orange);
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.4em;
+            margin-bottom: 40px;
+            max-width: 800px;
+            color: var(--text-light);
+        }
+
+        /* Services Section */
+        .services {
+            background-color: var(--background-light);
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .services h2 {
+            margin-bottom: 60px;
+            font-size: 3em;
+            color: var(--primary-dark);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 5px solid var(--accent-orange);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .service-card i {
+            font-size: 3.5em;
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .service-card .learn-more {
+            font-weight: bold;
+            color: var(--accent-orange);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 3px;
+        }
+        .service-card .learn-more::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--accent-orange);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .service-card .learn-more:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        /* Menu & About Section */
+        .menu-about {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 80px 20px;
+        }
+        .menu-about h2 {
+            color: var(--accent-orange);
+            margin-bottom: 60px;
+            font-size: 3em;
+        }
+        .menu-about h3 {
+             color: var(--text-light);
+             margin-bottom: 25px;
+             font-size: 2em;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+            text-align: left;
+        }
+
+        .menu-item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 20px;
+        }
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .menu-item h4 {
+            color: var(--accent-orange);
+            font-size: 1.8em;
+            margin-bottom: 8px;
+        }
+        .menu-item p {
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .chef-story-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+
+        .chef-story, .ambience-gallery {
+            text-align: left;
+        }
+
+        .chef-story img, .ambience-gallery img {
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 100%;
+            object-fit: cover;
+            height: 350px;
+        }
+        .chef-story h3, .ambience-gallery h3 {
+            margin-bottom: 20px;
+        }
+        .chef-story p, .ambience-gallery p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .chef-story .btn, .ambience-gallery .btn {
+            margin-top: 20px;
+        }
+
+        /* Call to Action for Reservations/Delivery */
+        .cta-reservations-delivery {
+            background-color: var(--accent-orange);
+            color: var(--text-light);
+            padding: 80px 20px;
+            margin-top: 60px;
+        }
+        .cta-reservations-delivery h2 {
+            color: var(--primary-dark);
+            font-size: 3.2em;
+            margin-bottom: 30px;
+        }
+        .cta-reservations-delivery p {
+            font-size: 1.4em;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.5;
+        }
+        .cta-reservations-delivery .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .cta-reservations-delivery .btn-group .btn {
+            background-color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+        .cta-reservations-delivery .btn-group .btn:hover {
+            background-color: var(--text-light);
+            color: var(--primary-dark);
+        }
+
+        /* Reviews Section */
+        .reviews {
+            background-color: var(--background-light);
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .reviews h2 {
+            margin-bottom: 60px;
+            font-size: 3em;
+            color: var(--primary-dark);
+        }
+        .review-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .review-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+            border-top: 5px solid var(--accent-orange);
+            position: relative;
+        }
+        .review-card i.fa-quote-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 2.5em;
+            color: var(--accent-orange);
+            opacity: 0.1;
+        }
+        .review-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #444;
+            position: relative;
+            z-index: 1;
+        }
+        .review-card .author {
+            font-weight: bold;
+            color: var(--primary-dark);
+            font-size: 1.1em;
+        }
+        .review-card .stars {
+            color: gold;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+
+        /* New Features Section */
+        .features {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 80px 20px;
+        }
+        .features h2 {
+            color: var(--accent-orange);
+            margin-bottom: 60px;
+            font-size: 3em;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background-color: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border-left: 5px solid var(--accent-orange);
+        }
+        .feature-card:hover {
+            background-color: rgba(255,255,255,0.1);
+            transform: translateY(-5px);
+        }
+        .feature-card h3 {
+            color: var(--text-light);
+            font-size: 1.6em;
+            margin-bottom: 10px;
+        }
+        .feature-card p {
+            color: rgba(255,255,255,0.7);
+        }
+        .feature-card i {
+            color: var(--accent-orange);
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--background-light);
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .contact h2 {
+            margin-bottom: 60px;
+            font-size: 3em;
+            color: var(--primary-dark);
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            text-align: left;
+        }
+        .contact-info {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-bottom: 5px solid var(--accent-orange);
+        }
+        .contact-info p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            display: flex;
+            align-items: flex-start;
+        }
+        .contact-info p i {
+            color: var(--accent-orange);
+            margin-right: 15px;
+            font-size: 1.5em;
+            margin-top: 5px;
+        }
+        .contact-info a {
+            color: var(--primary-dark);
+        }
+        .contact-info a:hover {
+            color: var(--accent-orange);
+        }
+        .contact-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--accent-orange);
+        }
+        .contact-form h3 {
+            color: var(--primary-dark);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1em;
+            color: var(--primary-dark);
+            background-color: var(--background-light);
+            transition: border-color 0.3s ease;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            outline: none;
+            border-color: var(--accent-orange);
+            box-shadow: 0 0 5px rgba(200, 114, 42, 0.5);
+        }
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        .contact-form label {
+            text-align: left;
+            font-weight: bold;
+            color: var(--primary-dark);
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-form .btn {
+            align-self: flex-start;
+            margin-top: 10px;
+        }
+
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 20px 20px;
+            text-align: center;
+            font-size: 0.95em;
+        }
+        .footer .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+        .footer h4 {
+            color: var(--accent-orange);
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+        .footer ul {
+            list-style: none;
+        }
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+        .footer ul li a {
+            color: rgba(255,255,255,0.7);
+        }
+        .footer ul li a:hover {
+            color: var(--accent-orange);
+        }
+        .footer .contact-details p {
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        .footer .contact-details a {
+             color: rgba(255,255,255,0.7);
+        }
+        .footer .contact-details a:hover {
+            color: var(--accent-orange);
+        }
+        .footer .copyright {
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9em;
+            text-align: center;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2.2em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 992px) {
+            .hero h1 { font-size: 3em; }
+            .hero p { font-size: 1.2em; }
+            .service-grid, .review-grid, .feature-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px; /* Adjust based on navbar height */
+                left: 0;
+                width: 100%;
+                background-color: var(--primary-dark);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .nav-links a {
+                padding: 15px 20px;
+                text-align: center;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                margin: 0;
+            }
+            .navbar .nav-links a:last-child {
+                border-bottom: none;
+            }
+            .nav-toggle {
+                display: block;
+            }
+            .footer .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .footer .footer-content > div {
+                margin-bottom: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            section { padding: 50px 15px; }
+            .hero { padding: 100px 15px; min-height: 70vh; }
+            .hero h1 { font-size: 3em; }
+            .hero p { font-size: 1.1em; }
+            .service-card { padding: 25px; }
+            .service-card i { font-size: 3em; }
+            .service-card h3 { font-size: 1.4em; }
+            .menu-about h2, .reviews h2, .features h2, .contact h2 { font-size: 2.5em; }
+            .cta-reservations-delivery h2 { font-size: 2.5em; }
+            .cta-reservations-delivery p { font-size: 1.2em; }
+            .contact-info, .contact-form { padding: 30px; }
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8em;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr; /* Two columns for menu items on desktop */
+            }
+            .contact-content {
+                grid-template-columns: 1fr 1.2fr; /* Info on left, Form on right */
+            }
+            .footer .footer-content {
+                grid-template-columns: 1.5fr 1fr 1fr 1.5fr; /* Adjust columns for desktop */
+            }
+        }
+
+        @media (min-width: 993px) {
+             .chef-story-gallery {
+                grid-template-columns: 1fr; /* Reset to 1 column for specific flex layout */
+                gap: 80px;
+             }
+            .chef-story, .ambience-gallery {
+                display: flex;
+                align-items: center;
+                gap: 40px;
+                text-align: left;
+            }
+            .chef-story img, .ambience-gallery img {
+                width: 50%;
+                height: 400px;
+                flex-shrink: 0;
+                margin-bottom: 0; /* Override mobile margin */
+            }
+            .chef-story .content, .ambience-gallery .content {
+                width: 50%;
+            }
+            .ambience-gallery {
+                flex-direction: row-reverse; /* Image on right, text on left */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/971585855331" class="whatsapp-float" target="_blank" aria-label="WhatsApp us">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Multani AlMumtaz Restaurant</div>
+        <div class="nav-toggle" id="navToggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links" id="navbarNav">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#menu-highlights">Menu</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <div class="container">
+            <h1>Experience Authentic Pakistani Cuisine in Al Ain</h1>
+            <p>Multani AlMumtaz Restaurant - Hilli Complex: Your No. 1 Choice for Meeting Point, Catering, Weddings, and Birthdays in Abu Dhabi.</p>
+            <a href="#menu-highlights" class="btn">Explore Our Delicious Menu</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Our Exceptional Services Tailored for You</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-utensils"></i>
+                    <h3>Dine-In</h3>
+                    <p>Savor the rich flavors of Pakistan in our warm, inviting ambiance, perfect for any occasion.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3>Takeaway</h3>
+                    <p>Enjoy your favorite Pakistani dishes fresh and hot, packed conveniently for pickup at your leisure.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Home Delivery</h3>
+                    <p>Experience our authentic cuisine delivered right to your doorstep, bringing comfort to your home.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-user-friends"></i>
+                    <h3>Private Dining</h3>
+                    <p>Host exclusive gatherings in our beautifully appointed private spaces, ensuring an intimate experience.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-concierge-bell"></i>
+                    <h3>Catering</h3>
+                    <p>Elevate your events with our exquisite Pakistani catering, serving unforgettable culinary delights.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Online Ordering</h3>
+                    <p>Browse our full menu and place your order effortlessly from anywhere, anytime for convenience.</p>
+                    <a href="#contact" class="learn-more">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights, Chef Story & Ambience Gallery Section -->
+    <section class="menu-about" id="menu-highlights">
+        <div class="container">
+            <h2>Culinary Excellence & Inviting Spaces</h2>
+
+            <h3>Our Signature Dishes</h3>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <h4>Nihari Lahori Style</h4>
+                    <p>A slow-cooked, rich beef stew, fragrant with aromatic spices, a true taste of Lahore.</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Chicken Karahi</h4>
+                    <p>Succulent chicken cooked in a traditional wok with fresh tomatoes, ginger, and green chilies, bursting with flavor.</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Lamb Biryani</h4>
+                    <p>Fragrant basmati rice layered with tender lamb, infused with saffron and traditional spices, a feast for the senses.</p>
+                </div>
+                <div class="menu-item">
+                    <h4>Paya Masala</h4>
+                    <p>Hearty and gelatinous trotters curry, simmered to perfection, a classic comfort food.</p>
+                </div>
+            </div>
+
+            <div class="chef-story-gallery">
+                <div class="chef-story">
+                    <img src="https://source.unsplash.com/featured/900x600/?chef,cooking" alt="Our passionate chef preparing Pakistani cuisine">
+                    <div class="content">
+                        <h3>The Artistry Behind Every Dish</h3>
+                        <p>Our Head Chef brings years of expertise and a passion for authentic Pakistani flavors to every creation. With roots deeply embedded in traditional culinary techniques, each dish at Multani AlMumtaz Restaurant tells a story of heritage, quality ingredients, and unwavering dedication.</p>
+                        <a href="#contact" class="btn btn-outline">Meet the Culinary Team</a>
+                    </div>
+                </div>
+                <div class="ambience-gallery">
+                    <img src="https://source.unsplash.com/featured/900x600/?fine,dining,interior" alt="Elegant restaurant interior ambience">
+                    <div class="content">
+                        <h3>An Ambience to Remember</h3>
+                        <p>Step into a world of elegance and comfort. Our restaurant's interior is thoughtfully designed to provide a warm and welcoming atmosphere, perfect for family dinners, business meetings, or celebrating life's special moments. Experience a dining setting that complements our exquisite cuisine.</p>
+                        <a href="#contact" class="btn btn-outline">Plan Your Visit</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservations & Delivery/Takeaway CTA -->
+    <section class="cta-reservations-delivery">
+        <div class="container">
+            <h2>Ready to Indulge?</h2>
+            <p>Whether you're planning a grand celebration, a cozy dinner, or a convenient meal at home, Multani AlMumtaz Restaurant is here to serve your needs.</p>
+            <div class="btn-group">
+                <a href="#contact" class="btn"><i class="fas fa-calendar-alt"></i> Book Your Dine-In Table</a>
+                <a href="#contact" class="btn"><i class="fas fa-box-open"></i> Order for Home Delivery</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <h2>What Our Guests Say</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"Multani AlMumtaz Restaurant offers the best Dine-In experience in Al Ain. The ambience is fantastic, and the Nihari is absolutely divine! Perfect for a family outing."</p>
+                    <div class="author">- Fatima K., Abu Dhabi</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"We used their Catering service for our wedding, and it was impeccable. The Lamb Biryani received endless compliments. Highly recommend for any major event!"</p>
+                    <div class="author">- Ahmed R., Al Ain</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <i class="fas fa-quote-left"></i>
+                    <p>"The Home Delivery is always prompt and the food arrives hot and fresh. Their Chicken Karahi is my go-to for a delicious and convenient meal at home."</p>
+                    <div class="author">- Sarah M., Hilli Complex</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>Now Available: Enhanced Restaurant Experience</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <i class="fas fa-comments"></i>
+                    <h3>Live Chat</h3>
+                    <p>Instant support for all your queries, available 24/7 directly on our website.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Online Booking</h3>
+                    <p>Secure your table or private dining reservation directly through our site, without needing to call.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>AI Assistant</h3>
+                    <p>Get quick, automated answers to common questions about our menu, services, and location.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>AI Voice Agent</h3>
+                    <p>Ensures every call is answered promptly, so you never miss out on service or information.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp Integration</h3>
+                    <p>Enjoy instant replies and seamless communication for your orders and inquiries on WhatsApp.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fab fa-google"></i>
+                    <h3>Live Google Reviews</h3>
+                    <p>See our latest customer feedback updated automatically on the site, reflecting genuine experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>Connect With Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Reach Out Directly</h3>
+                    <p><i class="fas fa-phone-alt"></i> Phone: <a href="tel:+971585855331">+971 58 585 5331</a></p>
+                    <p><i class="fas fa-envelope"></i> Email: <a href="mailto:DeliverooSG@kroll.com">DeliverooSG@kroll.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: shops 7 and 8 - Building 974 - Road 39 - Hili - Ndood Jham - Abu Dhabi - United Arab Emirates</p>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us an Enquiry</h3>
+                    <form action="#" method="POST">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="service">Interested Service</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="Dine-In">Dine-In</option>
+                            <option value="Takeaway">Takeaway</option>
+                            <option value="Home Delivery">Home Delivery</option>
+                            <option value="Private Dining">Private Dining</option>
+                            <option value="Catering">Catering</option>
+                            <option value="Online Ordering">Online Ordering</option>
+                        </select>
+
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Tell us more about your needs or query..." required></textarea>
+
+                        <button type="submit" class="btn">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand-info">
+                    <h4>Multani AlMumtaz Restaurant</h4>
+                    <p>Your No. 1 Choice for authentic Pakistani cuisine and exceptional service in Hilli Complex, Al Ain.</p>
+                </div>
+                <div class="footer-nav">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#menu-highlights">Menu</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#services">Dine-In</a></li>
+                        <li><a href="#services">Takeaway</a></li>
+                        <li><a href="#services">Home Delivery</a></li>
+                        <li><a href="#services">Private Dining</a></li>
+                        <li><a href="#services">Catering</a></li>
+                        <li><a href="#services">Online Ordering</a></li>
+                    </ul>
+                </div>
+                <div class="contact-details">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-phone-alt"></i> <a href="tel:+971585855331">+971 58 585 5331</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:DeliverooSG@kroll.com">DeliverooSG@kroll.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> shops 7 and 8 - Building 974 - Road 39 - Hili - Ndood Jham - Abu Dhabi - United Arab Emirates</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 Multani AlMumtaz Restaurant. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile nav if open
+                const navBarNav = document.getElementById('navbarNav');
+                if (navBarNav.classList.contains('active')) {
+                    navBarNav.classList.remove('active');
+                }
+            });
+        });
+
+        // Mobile navigation toggle
+        document.getElementById('navToggle').addEventListener('click', function() {
+            document.getElementById('navbarNav').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
